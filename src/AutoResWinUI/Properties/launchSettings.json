@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "AutoResWinUI (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "AutoResWinUI (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}

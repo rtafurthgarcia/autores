@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<winex:WindowEx xmlns:winex="using:WinUIEx"
+    x:Class="AutoResWinUI.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AutoResWinUI"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Title="AutoResWinUI"
+    Width="400" 
+    Height="300">   
+
+    <winex:WindowEx.SystemBackdrop>
+        <MicaBackdrop />
+    </winex:WindowEx.SystemBackdrop>
+
+    <StackPanel HorizontalAlignment="Stretch" Margin="4 0 4 0" VerticalAlignment="Center">
+        <Expander
+             IsExpanded="False"
+             ExpandDirection="Down"
+             VerticalAlignment="Top"
+             Header="Apps to monitor"
+        >
+            <Expander.Content>
+                <ComboBox HorizontalAlignment="Stretch">
+                    <ComboBoxItem>
+                        minecraft.exe
+                    </ComboBoxItem>
+                </ComboBox>
+            </Expander.Content>
+        </Expander>
+    </StackPanel>
+</winex:WindowEx>
