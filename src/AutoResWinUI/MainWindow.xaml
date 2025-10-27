@@ -9,26 +9,9 @@
     mc:Ignorable="d"
     Title="AutoResWinUI"
     Width="400" 
-    Height="300">   
+    Height="300">
 
     <winex:WindowEx.SystemBackdrop>
         <MicaBackdrop />
     </winex:WindowEx.SystemBackdrop>
-
-    <StackPanel HorizontalAlignment="Stretch" Margin="4 0 4 0" VerticalAlignment="Center">
-        <Expander
-             IsExpanded="False"
-             ExpandDirection="Down"
-             VerticalAlignment="Top"
-             Header="Apps to monitor"
-        >
-            <Expander.Content>
-                <ComboBox HorizontalAlignment="Stretch">
-                    <ComboBoxItem>
-                        minecraft.exe
-                    </ComboBoxItem>
-                </ComboBox>
-            </Expander.Content>
-        </Expander>
-    </StackPanel>
 </winex:WindowEx>

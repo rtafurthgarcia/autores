@@ -5,7 +5,8 @@
   xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
   xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
   xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
-  IgnorableNamespaces="uap rescap">
+  xmlns:iot="http://schemas.microsoft.com/appx/manifest/iot/windows10"
+  IgnorableNamespaces="uap rescap iot">
 
   <Identity
     Name="43834a51-86dd-4d9e-a965-ea1398c755fb"
@@ -16,7 +17,7 @@
 
   <Properties>
     <DisplayName>AutoResWinUI</DisplayName>
-    <PublisherDisplayName>Richard (perso)</PublisherDisplayName>
+    <PublisherDisplayName>Richard Esteban Leonardo Tafurth Garcia</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 
@@ -47,5 +48,6 @@
 
   <Capabilities>
     <rescap:Capability Name="runFullTrust" />
+    <iot:Capability Name="systemManagement"/>
   </Capabilities>
 </Package>
