@@ -1,7 +1,11 @@
 using Microsoft.UI.Windowing;
 using Microsoft.UI.Xaml;
+using Microsoft.UI.Xaml.Controls;
+using Microsoft.UI.Xaml.Navigation;
+using System;
 using System.Buffers;
 using System.Linq;
+using Windows.ApplicationModel.Activation;
 using Windows.UI.Shell;
 using WinUIEx;
 using WinUIEx.Messaging;
@@ -27,14 +31,14 @@ namespace AutoResWinUI
         {
             InitializeComponent();
 
-            this.AppWindow.SetTaskbarIcon("Assets/modern-tv.ico");
+            AppWindow.SetTaskbarIcon("Assets/modern-tv.ico");
             //this.AppWindow.SetTitleBarIcon("Assets/modern-tv.ico");
-            this.AppWindow.SetIcon("Assets/modern-tv.ico");
+            AppWindow.SetIcon("Assets/modern-tv.ico");
 
             var windowManager = WindowManager.Get(this);
             windowManager.IsVisibleInTray = true;
             
-            this.VisibilityChanged += MainWindow_VisibilityChanged;
+            VisibilityChanged += MainWindow_VisibilityChanged;
         }
 
         // from https://ben.stolovitz.com/posts/resize_winui_window_part_2_resize/

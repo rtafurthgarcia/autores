@@ -11,6 +11,5 @@ namespace AutoResCore.Models
 {
     public partial class MainModel: ObservableObject
     {
-        public ObservableCollection<WindowsDisplayAPI.Display> DisplayMonitors { get; set; } = new();
     }
 }
