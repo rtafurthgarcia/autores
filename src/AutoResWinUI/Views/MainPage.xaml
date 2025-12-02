@@ -5,20 +5,28 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:mvvm="using:AutoResCore.Mvvm"
-    mvvm:ViewModelLocator.AutoWireViewModel="True"
+    xmlns:vm="using:AutoResCore.ViewModels"
+    xmlns:m="using:AutoResCore.Models"
     mc:Ignorable="d">
 
-    <StackPanel HorizontalAlignment="Stretch" Margin="4 0 4 0" VerticalAlignment="Center">
+    <Page.DataContext>
+        <vm:MainViewModel x:Name="ViewModel"/>
+    </Page.DataContext>
+    
+    <StackPanel Margin="4 0 4 0">
         <Expander
-         IsExpanded="False"
+         IsExpanded="True"
          ExpandDirection="Down"
+         HorizontalAlignment="Stretch"
          VerticalAlignment="Top"
-         Header="Apps to monitor"
+         Header="Displays"
     >
             <Expander.Content>
-                <ComboBox HorizontalAlignment="Stretch" ItemsSource="{Binding DisplayMonitors}">
-
+                <ComboBox 
+                    HorizontalAlignment="Stretch" 
+                    ItemsSource="{x:Bind ViewModel.DisplayMonitors}"
+                    SelectedItem="{x:Bind ViewModel.SelectedDisplay, Mode=TwoWay}"
+                    DisplayMemberPath="DisplayFullName">
                 </ComboBox>
             </Expander.Content>
         </Expander>
